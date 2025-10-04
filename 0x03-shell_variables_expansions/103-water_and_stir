@@ -1,0 +1,5 @@
+#!/bin/bash
+water_dec=$((5#$(echo "$WATER" | tr 'water' '01234')))
+stir_dec=$((5#$(echo "$STIR" | tr 'stir.' '01234')))
+sum=$((water_dec + stir_dec))
+printf "%o" "$sum" | tr '01234567' 'bestchol'
